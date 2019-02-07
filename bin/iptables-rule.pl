@@ -12,10 +12,6 @@ my @countries=@ARGV;
 	push @buf,'*filter';
 
 	foreach my $country (@countries) {
-		push @buf,"-N COUNTRY_JP";
-	}
-
-	foreach my $country (@countries) {
 		my $filename=sprintf('%s/%s',$dir,$country);
 		open(my $fh,'<',$filename) || die "$filename - $!";
 		foreach(<$fh>) {
